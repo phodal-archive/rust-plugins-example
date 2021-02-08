@@ -1,7 +1,7 @@
 use plugin_interface::swagger::{SwaggerService, CocoSwagger};
 
 #[no_mangle]
-pub extern "Rust" fn swagger() -> Box<dyn SayHelloService> {
+pub extern "Rust" fn swagger() -> Box<dyn SwaggerService> {
     Box::new(SwaggerPlugin::default())
 }
 
