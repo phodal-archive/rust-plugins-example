@@ -18,7 +18,7 @@ jobs:
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
       - name: Build Debug for Testing
-        run: cargo build
+        run: cargo build --all
 
       - name: Run unit tests
         run: cargo run
