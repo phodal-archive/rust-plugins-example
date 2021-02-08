@@ -23,5 +23,8 @@ jobs:
       - name: Install cargo-make
         run: cargo install --force cargo-make
 
+      - name: Cargo Test
+        run: cargo make test
+
       - name: Run unit tests
         run: cargo run
