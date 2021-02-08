@@ -20,7 +20,7 @@ fn load_library() -> Library {
 #[cfg(target_os = "windows")]
 fn load_library() -> Library {
     unsafe {
-        return libloading::Library::new("target\\debug\\libcoco_swagger.dll")
+        return libloading::Library::new("target\\debug\\coco_swagger.dll")
             .expect("load library");
     }
 }
