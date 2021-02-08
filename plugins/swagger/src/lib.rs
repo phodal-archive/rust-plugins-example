@@ -5,6 +5,11 @@ pub fn swagger() -> Box<dyn SwaggerService> {
     Box::new(SwaggerPlugin::default())
 }
 
+#[no_mangle]
+pub fn demo() -> i32 {
+    return 42
+}
+
 pub struct SwaggerPlugin {}
 
 impl Default for SwaggerPlugin {
