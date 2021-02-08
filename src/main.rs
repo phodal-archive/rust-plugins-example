@@ -4,7 +4,7 @@ use plugin_interface::swagger::SwaggerService;
 #[cfg(target_os = "linux")]
 fn load_library() -> Library {
     unsafe {
-        return libloading::Library::new("target/debug/libcoco_swagger.dylib")
+        return libloading::Library::new("target/debug/libcoco_swagger.so")
             .expect("load library");
     }
 }
