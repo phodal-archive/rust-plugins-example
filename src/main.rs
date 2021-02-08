@@ -3,7 +3,7 @@ use plugin_interface::swagger::SwaggerService;
 
 #[cfg(target_os = "linux")]
 fn load_library(lib_name: &str) -> Library {
-    let path = format!("target/debug/lib{}.so", libname);
+    let path = format!("target/debug/lib{}.so", lib_name);
     unsafe {
         return libloading::Library::new(path)
             .expect("load library");
