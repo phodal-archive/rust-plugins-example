@@ -21,7 +21,7 @@ fn load_library(lib_name: &str) -> Library {
 
 #[cfg(target_os = "windows")]
 fn load_library(lib_name: &str) -> Library {
-    let path = format!("target\\debug\\{}.dylib", lib_name);
+    let path = format!("target\\debug\\{}.dll", lib_name);
     unsafe {
         return libloading::Library::new(path)
             .expect("load library");
