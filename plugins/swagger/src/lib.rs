@@ -17,6 +17,7 @@ impl Default for SwaggerPlugin {
 
 impl SwaggerService for SwaggerPlugin {
     fn run(&self) -> CocoSwagger {
+        println!("start swagger services");
         CocoSwagger {
 
         }
